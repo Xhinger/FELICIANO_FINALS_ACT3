@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    margin: 0;
+    padding: clamp(12px, 4vw, 46px) 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+    background-color: orange;
+    width: calc(100% - 24px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: clamp(12px, 4vw, 25px);
+
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+h1{
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    overflow-wrap: anywhere;
+}
+
+button{
+    max-width: 100%;
+    background-color: black;
+    color: white;
+    padding: clamp(10px, 3vw, 15px);
+    border: none;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    white-space: normal;
+
+}
+
+button:hover{
+    box-shadow: 0 0 40px red;
+    background-color: red;
+    color: black;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td{
+    padding: clamp(4px, 2vw, 10px);
+    overflow-wrap: anywhere;
+}
+
+input,
+select{
+    max-width: 100%;
+}
+
+input{
+    width: 260px;
+}
+
+@media (max-width: 300px){
+    .card{
+        padding: 10px;
+        border-radius: 16px;
+    }
+
+    th,
+    td{
+        padding: 3px 2px;
+        font-size: 12px;
+    }
+}
